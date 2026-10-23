@@ -1,0 +1,13 @@
+{
+  "businessName": "AI Operations Partners",
+  "palette": [
+    "#00595d",
+    "#343a40"
+  ],
+  "typography": {
+    "heading": "Manrope",
+    "body": "Inter",
+    "source": "https://fonts.google.com/"
+  },
+  "logoType": "combination"
+}

@@ -124,6 +124,8 @@ a { color: var(--teal); }
 
 .note + .note { margin-top: var(--s1); font-weight: 600; }
 
+.grid + .note { margin-top: var(--s3); }
+
 /* Header */
 .header {
   position: sticky;
@@ -198,7 +200,7 @@ a { color: var(--teal); }
 
 .callout { max-width: 48rem; margin-top: var(--s4); }
 
-.section:not(.alt) .callout { background: var(--tint); }
+.section:not(.alt) .card { background: var(--tint); }
 
 .time { color: var(--teal); font-size: 0.875rem; font-weight: 600; }
 

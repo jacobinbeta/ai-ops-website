@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The CFO Buying Signals Playbook | AI Operations Partners</title>
+  <meta name="description" content="10 signs a business needs a CFO, where to find them for free, and what to say when you do. A playbook for Fractional CFO practices.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap">
+  <style>
+    :root {
+      --teal: #00595d;
+      --charcoal: #343a40;
+      --muted: #5d656c;
+      --white: #fff;
+      --tint: #edf4f4;
+      --line: #d5e3e3;
+      --font-head: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e6eaea;
+      color: var(--charcoal);
+      font: 400 0.98rem/1.6 var(--font-body);
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-head);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--charcoal);
+    }
+
+    h1 { font-size: 2.6rem; letter-spacing: -0.02em; max-width: 16ch; }
+    h2 { font-size: 1.75rem; letter-spacing: -0.01em; }
+    h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.25rem; }
+
+    p, ul, ol { margin: 0 0 0.9rem; }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+
+    a { color: var(--teal); }
+
+    /* Pages */
+    .page {
+      width: min(8.5in, 100% - 2rem);
+      margin: 1.5rem auto;
+      padding: 0.75in 0.8in;
+      background: var(--white);
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+    }
+
+    .eyebrow {
+      margin-bottom: 0.5rem;
+      color: var(--teal);
+      font: 600 0.78rem/1.4 var(--font-body);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lede { font-size: 1.1rem; color: var(--muted); }
+
+    /* Cover */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      min-height: 10in;
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .cover h1, .cover .eyebrow { color: var(--white); }
+    .cover .lede { color: rgb(255 255 255 / 0.85); max-width: 40ch; }
+    .cover .logo { width: 220px; margin-bottom: auto; }
+    .cover .title { margin: 2in 0 auto; }
+    .cover .byline { font-size: 0.9rem; color: rgb(255 255 255 / 0.85); }
+
+    /* Signal pages */
+    .signal-head {
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .signal-num {
+      font: 800 2rem/1 var(--font-head);
+      color: var(--teal);
+    }
+
+    .signal-head h2 { margin: 0; font-size: 1.45rem; }
+
+    .signal + .signal { margin-top: 2rem; }
+
+    .label {
+      display: block;
+      margin: 1rem 0 0.35rem;
+      color: var(--teal);
+      font: 600 0.75rem/1.4 var(--font-body);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .message {
+      margin: 0.35rem 0 0;
+      padding: 0.9rem 1.1rem;
+      background: var(--tint);
+      border-left: 3px solid var(--teal);
+      font-size: 0.93rem;
+    }
+
+    .message p:last-child { margin-bottom: 0; }
+
+    .tip {
+      margin: 1rem 0 0;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    .tip strong { color: var(--teal); }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0 1rem;
+      font-size: 0.88rem;
+    }
+
+    th, td {
+      padding: 0.5rem 0.6rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--tint);
+      font-weight: 600;
+    }
+
+    .contents li { margin-bottom: 0.25rem; }
+
+    /* Closing page */
+    .closing { background: var(--tint); }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.8rem 1.4rem;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
+    .signature { margin-top: 1.5rem; }
+    .signature img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; }
+
+    .badge {
+      margin-left: auto;
+      padding: 0.15rem 0.5rem;
+      background: var(--teal);
+      color: var(--white);
+      font: 600 0.68rem/1.4 var(--font-body);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .search {
+      padding: 0.1rem 0.35rem;
+      background: var(--tint);
+      font: 500 0.85rem/1.5 ui-monospace, "SF Mono", Menlo, monospace;
+    }
+
+    .story {
+      margin: 1.25rem 0;
+      padding: 1rem 1.25rem;
+      background: var(--tint);
+      border-left: 3px solid var(--teal);
+    }
+
+    .story p:last-child { margin-bottom: 0; }
+
+    .start {
+      margin: 1.25rem 0 0;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--teal);
+    }
+
+    .start ol { margin-bottom: 0; }
+
+    @media (max-width: 640px) {
+      .page { padding: 1.5rem 1.25rem; }
+      .cover { min-height: auto; }
+      .cover .title { margin: 3rem 0; }
+      h1 { font-size: 2rem; }
+      table { font-size: 0.8rem; }
+    }
+
+    /* Print to PDF: one sheet per .page */
+    @page { size: letter; margin: 0; }
+
+    @media print {
+      body { background: var(--white); }
+      .page {
+        width: auto;
+        margin: 0;
+        padding: 0.55in 0.75in;
+        box-shadow: none;
+        break-after: page;
+        font-size: 0.95rem;
+      }
+      .page:last-child { break-after: auto; }
+      .cover, .closing { min-height: 11in; }
+      .signal + .signal { margin-top: 1.5rem; }
+      .signal { break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <section class="page cover">
+    <img class="logo" src="../assets/logo-on-dark.svg" alt="AI Operations Partners">
+    <div class="title">
+      <p class="eyebrow">A playbook for Fractional CFO practices</p>
+      <h1>The CFO Buying Signals Playbook</h1>
+      <p class="lede">10 signs a business needs a CFO, where to find them for free, and what to say when you do.</p>
+    </div>
+    <p class="byline">Jacob Krogue, CPA<br>Founder, AI Operations Partners</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="page">
+    <p class="eyebrow">Before you start</p>
+    <h2>Owners don't look for a CFO out of nowhere</h2>
+
+    <p>I was the founding employee at a Fractional CFO firm and helped grow it from 8 clients to more than 30. Nearly all of them came through referrals. But some of our best work started with a signal.</p>
+
+    <div class="story">
+      <p>We heard that a company had just opened a new location, so we reached out. They were in the middle of negotiating debt agreements and the capital and build-out terms for the new site, and they needed help. They became a multi-year client and kept growing and scaling with us.</p>
+    </div>
+
+    <p>Something usually happens before an owner goes looking for finance help. They open a location, take on debt, raise money or hire their first controller. Many of those moments leave a public trail. This playbook shows you where to find it, and what to say when you do.</p>
+
+    <p>Each signal comes with three things: <strong>why it matters</strong>, <strong>where to find it</strong> (free sources and the exact search to run) and <strong>what to say</strong> (a short first message to adapt to your own voice).</p>
+
+    <div class="start">
+      <h3 style="margin-top:0">Short on time? Start with these three</h3>
+      <ol>
+        <li><strong>Signal 1, hiring a controller with no CFO:</strong> the clearest sign of need, and a two-minute search.</li>
+        <li><strong>Signal 3, opening a new location:</strong> set up two Google Alerts once, and leads arrive in your inbox.</li>
+        <li><strong>Signal 5, a recent raise:</strong> one free SEC search shows every new raise in your state.</li>
+      </ol>
+    </div>
+
+    <div class="tip"><strong>Who to contact:</strong> at companies under about $50M in revenue, write to the owner, CEO or president. They feel the pain, and they make the decision.</div>
+  </section>
+
+  <!-- Signals 1-3 -->
+  <section class="page">
+    <p class="eyebrow">Hiring signals</p>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">01</span><h2>Hiring a controller with no CFO</h2><span class="badge">Start here</span></div>
+      <p><span class="label">Why it matters</span>They've outgrown the bookkeeper and are building a finance team, with nobody above the controller to set direction. A controller closes the books. They don't build the forecast or manage the bank.</p>
+      <span class="label">Where to find it</span>
+      <ul>
+        <li>On LinkedIn Jobs or Indeed, search <span class="search">controller "reports to the CEO"</span> in your area, posted in the last 30 days. Also try "reports to the owner" and "reports to the President".</li>
+        <li>On Google, search <span class="search">site:boards.greenhouse.io OR site:jobs.lever.co controller "reports to the CEO"</span> to catch postings on company careers pages.</li>
+      </ul>
+      <div class="message"><p>Hi [Name], I saw [Company] is hiring a controller who'll report to you. A good controller will tighten up the close. If you'd also like help with the forward-looking side, like cash forecasting and the bank, that's what my firm does part-time. Open to a 20-minute call?</p></div>
+    </article>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">02</span><h2>Searching for a finance leader</h2></div>
+      <p><span class="label">Why it matters</span>A company posting for a CFO, VP or Head of Finance, especially to replace someone who left, has a gap right now. A full-time search takes months, and the close and the bank won't wait.</p>
+      <span class="label">Where to find it</span>
+      <ul>
+        <li>Search <span class="search">"Head of Finance" OR "Director of Finance" OR "VP Finance"</span> in your area.</li>
+        <li>Prioritize postings that have been open 30 days or more. A long search means they're feeling the gap.</li>
+      </ul>
+      <div class="message"><p>Hi [Name], I noticed [Company] is searching for a finance leader. While you find the right person, I can step in as fractional CFO so nothing slips. Some companies find part-time covers what they need for now. Worth a quick conversation?</p></div>
+    </article>
+  </section>
+
+  <!-- Signals 3-4 -->
+  <section class="page">
+    <p class="eyebrow">Expansion and debt signals</p>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">03</span><h2>Opening a new location</h2><span class="badge">Start here</span></div>
+      <p><span class="label">Why it matters</span>A new site usually means new debt, lease and build-out negotiations, new tax obligations, and an owner asking whether each location really makes money. That's exactly how our multi-year client started.</p>
+      <span class="label">Where to find it</span>
+      <ul>
+        <li>Set Google Alerts for <span class="search">"new location" OR "grand opening" [your state]</span> and <span class="search">"breaks ground" OR "expansion" [your state]</span>.</li>
+        <li>Watch for the same company posting jobs in a new city.</li>
+      </ul>
+      <div class="message"><p>Hi [Name], I saw [Company] is opening in [City]. Expansions like this usually come with new financing, lease and build-out terms to negotiate. I help owners get those right and see how each location performs. Would it help to talk?</p></div>
+    </article>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">04</span><h2>Taking on new debt</h2></div>
+      <p><span class="label">Why it matters</span>Lenders bring covenants and regular reporting. Many owners sign the loan and only then learn what the bank expects to receive.</p>
+      <span class="label">Where to find it</span>
+      <ul>
+        <li>The SBA publishes its 7(a) and 504 loan data on <strong>data.sba.gov</strong>, with borrower, city, lender, amount and approval date. Download the latest file and filter to your state and loan size.</li>
+        <li>Ask the commercial bankers you know. They see this signal first, and they want their borrowers to have good financial reporting.</li>
+      </ul>
+      <div class="message"><p>Hi [Name], I saw [Company] recently closed financing with [Lender]. Banks often ask for more than owners expect, like covenant calculations and borrowing-base reports. If that's landing on your desk, I can take it off your plate.</p></div>
+    </article>
+  </section>
+
+  <!-- Signals 5-6 -->
+  <section class="page">
+    <p class="eyebrow">Capital and growth signals</p>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">05</span><h2>Just raised outside capital</h2><span class="badge">Start here</span></div>
+      <p><span class="label">Why it matters</span>New investors expect board reporting and a credible forecast, often within the first quarter.</p>
+      <span class="label">Where to find it</span>
+      <p>Companies that raise private money file a <strong>Form D</strong> with the SEC, usually within 15 days. It's free and lists the amount, the date and the executives.</p>
+      <ol>
+        <li>Go to <strong>sec.gov/edgar/search</strong>.</li>
+        <li>Enter an industry keyword, set the form type to <strong>D</strong>, pick the last 30 days and set "Principal executive offices in" to your state.</li>
+        <li>Skip funds and real estate vehicles, and focus on operating companies.</li>
+      </ol>
+      <div class="message"><p>Hi [Name], I saw [Company] recently closed a round. The first board meeting after a raise is often when founders feel the reporting gap most. Happy to share the reporting package and forecast structure that works for companies at your stage.</p></div>
+    </article>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">06</span><h2>Growing fast</h2></div>
+      <p><span class="label">Why it matters</span>Fast growth burns cash even when the business is profitable, and the owner starts making big decisions without reliable numbers.</p>
+      <span class="label">Where to find it</span>
+      <ul>
+        <li>Filter the <strong>Inc. 5000</strong> (inc.com/inc5000) by state and industry, and check your business journal's "fastest-growing companies" list.</li>
+        <li>On LinkedIn, look for companies whose employee count jumped over the past year.</li>
+      </ul>
+      <div class="message"><p>Hi [Name], I saw [Company] on [List]. Growth like that is often when cash gets tight in ways the P&amp;L doesn't show. I help companies at your stage build a cash forecast they can run the business on. Useful right now?</p></div>
+    </article>
+  </section>
+
+  <!-- Signals 7-8 -->
+  <section class="page">
+    <p class="eyebrow">Change signals</p>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">07</span><h2>Made an acquisition</h2></div>
+      <p><span class="label">Why it matters</span>Integration means two sets of books, new systems and acquisition debt, which is more than most internal teams can absorb.</p>
+      <p><span class="label">Where to find it</span>Set a Google Alert for <span class="search">"acquires" OR "has acquired" [your state]</span>.</p>
+      <div class="message"><p>Hi [Name], I read about [Company]'s acquisition of [Target]. The first year of integration is when the numbers usually get messy. If you'd like an experienced hand on the finance side, I'd be glad to help.</p></div>
+    </article>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">08</span><h2>New CEO or new owner</h2></div>
+      <p><span class="label">Why it matters</span>A new CEO, or an owner who just bought the business, wants a clear view of the numbers fast, and is open to new advisors in the first 90 days.</p>
+      <p><span class="label">Where to find it</span>Set Google Alerts for <span class="search">"named CEO" OR "appointed president" [your state]</span>, and watch local business news for ownership changes.</p>
+      <div class="message"><p>Hi [Name], congratulations on the new role at [Company]. Many new leaders want an independent view of the numbers before making big calls. I'd be glad to help you get there quickly.</p></div>
+    </article>
+  </section>
+
+  <!-- Signals 9-10 -->
+  <section class="page">
+    <p class="eyebrow">Niche signals</p>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">09</span><h2>Won a government contract</h2></div>
+      <p><span class="label">Why it matters</span>Federal contracts bring cost accounting and compliance rules that many growing contractors aren't set up for.</p>
+      <p><span class="label">Where to find it</span>On <strong>USAspending.gov</strong>, use Award Search to filter for contracts awarded recently to companies in your state, then sort by amount.</p>
+      <div class="message"><p>Hi [Name], I saw [Company] won a contract with [Agency]. Government work comes with accounting requirements that catch a lot of contractors off guard. Happy to walk you through what to have in place.</p></div>
+    </article>
+
+    <article class="signal">
+      <div class="signal-head"><span class="signal-num">10</span><h2>A nonprofit growing fast</h2></div>
+      <p><span class="label">Why it matters</span>Growth brings grant reporting, board scrutiny and, at $1 million or more in federal spending in a year, a Single Audit. Few can justify a full-time CFO.</p>
+      <p><span class="label">Where to find it</span>On <strong>ProPublica Nonprofit Explorer</strong>, search your state and look for big year-over-year revenue jumps in recent Form 990s.</p>
+      <div class="message"><p>Hi [Name], I noticed [Organization] has grown significantly in the last couple of years. That usually brings more grant reporting and board scrutiny. I provide part-time CFO support to nonprofits at your stage. Open to a short call?</p></div>
+    </article>
+  </section>
+
+  <!-- Routine -->
+  <section class="page">
+    <p class="eyebrow">Putting it to work</p>
+    <h2>The 30-minute weekly routine</h2>
+    <p class="lede">Signals only pay off if you check them every week. Block 30 minutes on the same day each week.</p>
+
+    <table>
+      <thead>
+        <tr><th>Time</th><th>What to do</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10 min</td><td><strong>Scan.</strong> Rerun your saved job searches (signals 1 and 2), check new Form D filings (signal 5) and skim your Google Alerts.</td></tr>
+        <tr><td>10 min</td><td><strong>Qualify.</strong> Confirm each company fits your ideal client, has no CFO, and find the owner or CEO.</td></tr>
+        <tr><td>10 min</td><td><strong>Reach out.</strong> Send 3 to 5 personal messages and log them.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Four rules</h3>
+    <ul>
+      <li><strong>Lead with the signal.</strong> Your first line should show you noticed something specific about their business.</li>
+      <li><strong>Move within two weeks.</strong> Timing is the whole advantage.</li>
+      <li><strong>Follow up twice,</strong> about a week apart, adding something useful each time.</li>
+      <li><strong>Keep it personal.</strong> Write each message to one person, say clearly who you are, and stop if they ask.</li>
+    </ul>
+
+    <div class="tip"><strong>Track it in one spreadsheet:</strong> company, signal, date seen, contact, the dates of each touch, and the outcome.</div>
+  </section>
+
+  <!-- Closing -->
+  <section class="page closing">
+    <p class="eyebrow">What's next</p>
+    <h2>This works. The hard part is doing it every week.</h2>
+
+    <p>Thirty minutes a week sounds easy until a client deadline lands. Outreach is the first thing to slip, follow-ups go cold, and you're back to waiting on referrals.</p>
+
+    <p>That's why I built the <strong>AI Growth Engine</strong>. It watches for these signals in your market every day, reaches out with messages you've approved, and an AI SDR answers replies within minutes and books qualified owners onto your calendar. You keep serving clients and only take the calls.</p>
+
+    <h3>Get your free Pipeline Plan</h3>
+    <p>A 30-minute session. Whether or not we work together, you leave with:</p>
+    <ul>
+      <li>A one-page profile of your ideal client</li>
+      <li>A count of the companies in your market that fit it</li>
+      <li>Two sample outreach messages written for your practice</li>
+      <li>A straight answer on fit</li>
+    </ul>
+    <a class="btn" href="https://aioperationspartners.com/#BOOKING-LINK">Book my Pipeline Plan call</a>
+
+    <div class="signature">
+      <img src="../assets/jacob-krogue.jpg" alt="Jacob Krogue">
+      <p><strong>Jacob Krogue, CPA</strong><br>Founder and CEO, AI Operations Partners<br>
+      <a href="mailto:info@aioperationspartners.com">info@aioperationspartners.com</a> · <a href="https://aioperationspartners.com">aioperationspartners.com</a></p>
+    </div>
+  </section>
+
+</body>
+</html>

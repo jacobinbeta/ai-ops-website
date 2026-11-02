@@ -316,6 +316,38 @@ a { color: var(--teal); }
 
 .dark .checks li::before { background: var(--white); }
 
+/* Signup form (Kit) */
+.signup { max-width: 48rem; margin: var(--s4) 0 var(--s2); }
+
+.signup-fields { display: grid; gap: var(--s1); }
+
+.signup .formkit-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--white);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--charcoal);
+  font: inherit;
+}
+
+.signup .formkit-submit { cursor: pointer; font: inherit; font-weight: 600; }
+
+.signup .formkit-submit[data-active] { opacity: 0.7; cursor: progress; }
+
+.formkit-alert {
+  margin: 0 0 var(--s2);
+  padding: var(--s2) var(--s3);
+  border-radius: var(--radius);
+  list-style: none;
+}
+
+.formkit-alert:empty { display: none; }
+
+.formkit-alert-error { background: #fde8e2; color: #9b2c10; }
+
+.formkit-alert-success { background: var(--white); color: var(--teal); font-weight: 600; }
+
 .ps {
   max-width: 42rem;
   margin: var(--s4) 0 0;
@@ -341,6 +373,8 @@ a { color: var(--teal); }
   .grid-2, .grid-4 { grid-template-columns: repeat(2, 1fr); }
 
   .founder { grid-template-columns: 14rem 1fr; }
+
+  .signup-fields { grid-template-columns: 1fr 1.4fr auto; }
 
   .compare { font-size: 1rem; }
 

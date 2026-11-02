@@ -312,7 +312,7 @@ a { color: var(--teal); }
 
 .dark :focus-visible, .footer :focus-visible { outline-color: var(--white); }
 
-.dark .eyebrow { color: var(--white); }
+.dark .eyebrow, .dark .link { color: var(--white); }
 
 .dark .checks li::before { background: var(--white); }
 

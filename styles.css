@@ -165,9 +165,9 @@ a { color: var(--teal); }
 .listen { gap: var(--s2); }
 
 @media (max-width: 479px) {
-  .logo img { height: 1.25rem; }
+  .logo img { height: 2rem; }
 
-  .nav { gap: var(--s1); }
+  .nav { gap: 0.875rem; }
 
   .nav .btn-sm { padding-inline: var(--s1); }
 }

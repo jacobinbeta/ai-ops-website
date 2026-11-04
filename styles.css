@@ -4,6 +4,8 @@
   --charcoal: #343a40;
   --white: #fff;
   --tint: #edf4f4;
+  --gold: #f5aa16;
+  --gold-dark: #e09600;
   --font-head: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --s1: 0.5rem;
@@ -113,6 +115,11 @@ a { color: var(--teal); }
 .btn-light { background: var(--white); border-color: var(--white); color: var(--teal); }
 
 .btn-light:hover { background: var(--tint); border-color: var(--tint); }
+
+/* Reserved for the primary call to action (the playbook) */
+.btn-accent { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
+
+.btn-accent:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: var(--charcoal); }
 
 .link { font-weight: 600; }
 

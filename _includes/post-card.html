@@ -1,0 +1,7 @@
+{%- assign minutes = include.post.content | number_of_words | divided_by: 230 | at_least: 1 -%}
+<article class="card post-card">
+  <p class="time">{{ include.post.category | default: "Article" }} · {{ minutes }} min read</p>
+  {% if include.featured %}<h2>{% else %}<h3>{% endif %}<a href="{{ include.post.url }}">{{ include.post.title }}</a>{% if include.featured %}</h2>{% else %}</h3>{% endif %}
+  <p>{{ include.post.description }}</p>
+  <p class="note"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %-d, %Y" }}</time> · <span class="link">Read the article</span></p>
+</article>

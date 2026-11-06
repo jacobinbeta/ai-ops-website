@@ -174,7 +174,14 @@ a { color: var(--teal); }
 @media (max-width: 479px) {
   .logo img { height: 2rem; }
 
-  .nav { gap: 0.875rem; }
+  .nav { gap: 0.625rem; }
+
+  .nav > a:not(.btn) { font-size: 0.875rem; }
+}
+
+/* Very small phones: the logo already links home */
+@media (max-width: 374px) {
+  .nav > a:first-child { display: none; }
 
   .nav .btn-sm { padding-inline: var(--s1); }
 }
@@ -406,3 +413,42 @@ a { color: var(--teal); }
 }
 
 .footer-links { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); }
+
+/* Blog */
+.article { width: min(46rem, 100% - 2 * var(--gutter)); }
+
+.article .brief { margin-block: var(--s4); }
+
+.featured { max-width: 48rem; margin-top: var(--s4); }
+
+.post-card { position: relative; }
+
+.post-card h2 { font-size: 1.6rem; }
+
+.post-card a { color: inherit; text-decoration: none; }
+
+.post-card a::after { content: ""; position: absolute; inset: 0; }
+
+.post-card .link { color: var(--teal); }
+
+.post-card:hover :is(a, .link) { color: var(--teal); text-decoration: underline; }
+
+.prose { font-size: 1.0625rem; }
+
+.prose h2 { margin-top: var(--s4); font-size: 1.6rem; }
+
+.prose h3 { margin-top: var(--s3); }
+
+.prose :is(ul, ol) { margin: 0 0 var(--s2); padding-left: var(--s3); }
+
+.prose li { margin-bottom: var(--s1); }
+
+.prose blockquote {
+  margin: var(--s3) 0;
+  padding-left: var(--s2);
+  border-left: 3px solid var(--teal);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.prose code { padding: 0.1rem 0.35rem; background: var(--tint); font-size: 0.9em; }

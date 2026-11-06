@@ -1,0 +1,22 @@
+# Blog settings. GitHub Pages reads this file to build the blog.
+# Pages without front matter (everything outside the blog) are published unchanged.
+title: AI Operations Partners
+description: Practical advice on growing a Fractional CFO practice, by Jacob Krogue, CPA.
+url: https://aioperationspartners.com
+author: Jacob Krogue
+timezone: America/New_York
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

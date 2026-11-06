@@ -1,3 +1,6 @@
+---
+layout: null
+---
 # AI Operations Partners
 
 > AI Operations Partners runs a fully managed, AI-powered lead generation service built only for Fractional CFO practices. Its AI Growth Engine finds business owners who are showing signs they need a CFO, reaches out on the practice's behalf, and uses an AI SDR (sales development representative) to answer replies and book qualified sales calls directly onto the practice's calendar. Outreach is live within 21 days of kickoff, guaranteed. The company was founded by Jacob Krogue, CPA.
@@ -37,6 +40,11 @@ Jacob Krogue is a CPA with a master's degree in accounting from BYU. He was the 
 - [Home: AI lead generation for Fractional CFO practices](https://aioperationspartners.com/): The AI Growth Engine, how it works, who it's for, pricing model, guarantee and FAQ
 - [Free Signal Scan](https://aioperationspartners.com/signal-scan/): A free list of up to 10 companies in a Fractional CFO practice's market that are showing signs they need a CFO right now, with the signal and decision maker for each
 - [Rolling Forecast podcast](https://aioperationspartners.com/podcast/): Conversations with Fractional CFO and accounting firm founders on starting, growing and running a practice as AI changes the work
+- [Blog](https://aioperationspartners.com/blog/): Practical advice for Fractional CFO founders on finding and winning clients, written by Jacob Krogue, CPA (RSS: https://aioperationspartners.com/blog/feed.xml)
+
+## Blog articles
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description }}{% endfor %}
 
 ## Free resources
 

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html title=page.title description=page.description og_type="article" %}
+  {%- assign updated = page.updated | default: page.date %}
+  {%- assign words = content | number_of_words %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ updated | date_to_xmlschema }}">
+  <meta property="article:author" content="Jacob Krogue">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "url": "{{ page.url | absolute_url }}",
+      "mainEntityOfPage": "{{ page.url | absolute_url }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ updated | date_to_xmlschema }}",
+      "image": "{{ page.image | default: '/assets/social-avatar-1024.png' | absolute_url }}",
+      "articleSection": {{ page.category | default: "Article" | jsonify }},
+      "wordCount": {{ words }},
+      "inLanguage": "en-US",
+      "author": { "@id": "https://aioperationspartners.com/#jacob-krogue" },
+      "publisher": { "@id": "https://aioperationspartners.com/#organization" },
+      "isPartOf": { "@type": "Blog", "@id": "https://aioperationspartners.com/blog/#blog", "name": "AI Operations Partners Blog", "url": "https://aioperationspartners.com/blog/" }
+    },
+{% include schema-people.html %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aioperationspartners.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aioperationspartners.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+{% include header.html %}
+
+  <main id="main">
+    <article class="section">
+      <div class="container article">
+        <p class="eyebrow"><a href="/blog/">Blog</a> · {{ page.category | default: "Article" }}</p>
+        <h1>{{ page.title }}</h1>
+        <p class="lead">{{ page.description }}</p>
+        <div class="byline">
+          <img src="/assets/jacob-krogue.jpg" alt="Jacob Krogue" width="480" height="480">
+          <p><strong>Jacob Krogue, CPA</strong><br><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.updated %} · Updated <time datetime="{{ updated | date_to_xmlschema }}">{{ updated | date: "%B %-d, %Y" }}</time>{% endif %} · {{ words | divided_by: 230 | at_least: 1 }} min read</p>
+        </div>
+
+        {% if page.takeaways %}
+        <aside class="brief"aria-label="Key takeaways">
+          <h2>Key takeaways</h2>
+          <ul class="checks">
+            {% for item in page.takeaways %}<li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </aside>
+        {% endif %}
+
+        <div class="prose">
+{{ content }}
+        </div>
+
+        <aside class="brief" aria-label="About the author">
+          <p class="eyebrow">About the author</p>
+          <div class="byline">
+            <img src="/assets/jacob-krogue.jpg" alt="" width="480" height="480" loading="lazy">
+            <p><strong>Jacob Krogue, CPA</strong> was the founding employee at a Fractional CFO firm and helped grow it from 8 to more than 30 clients. He founded AI Operations Partners to help Fractional CFO practices fill their pipelines, and hosts the <a href="/podcast/">Rolling Forecast podcast</a>.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+{% include playbook-signup.html %}
+
+    {% assign others = site.posts | where_exp: "post", "post.url != page.url" %}
+    {% if others.size > 0 %}
+    <section class="section alt">
+      <div class="container">
+        <h2>Keep reading</h2>
+        <div class="grid grid-3">
+          {% for post in others limit:3 %}
+          {% include post-card.html post=post %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+  </main>
+
+{% include footer.html %}
+</body>
+</html>

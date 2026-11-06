@@ -1,0 +1,25 @@
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ include.title }}</title>
+  <meta name="description" content="{{ include.description | strip_html | strip }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Jacob Krogue, CPA">
+  <meta name="theme-color" content="#00595d">
+
+  <meta property="og:type" content="{{ include.og_type | default: 'website' }}">
+  <meta property="og:site_name" content="AI Operations Partners">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ include.title }}">
+  <meta property="og:description" content="{{ include.description | strip_html | strip }}">
+  <meta property="og:image" content="{{ page.image | default: '/assets/social-avatar-1024.png' | absolute_url }}">
+  <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  {% feed_meta %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=7">

@@ -1,0 +1,13 @@
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header-row">
+      <a href="/" class="logo"><picture><source media="(max-width: 479px)" srcset="/assets/icon.svg"><img src="/assets/logo.svg" alt="AI Operations Partners home" width="1024" height="208"></picture></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="/blog/"{% if page.url == "/blog/" %} aria-current="page"{% endif %}>Blog</a>
+        <a class="btn btn-sm btn-accent" href="#playbook">Get the Playbook</a>
+      </nav>
+    </div>
+  </header>

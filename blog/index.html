@@ -1,0 +1,85 @@
+---
+title: Fractional CFO Practice Growth Blog | AI Operations Partners
+description: Practical advice for Fractional CFO founders on finding clients beyond referrals, outbound that doesn't feel like spam, and how AI is changing the work. By Jacob Krogue, CPA.
+---
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html title=page.title description=page.description %}
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://aioperationspartners.com/blog/#blog",
+      "name": "AI Operations Partners Blog",
+      "url": "https://aioperationspartners.com/blog/",
+      "description": {{ page.description | jsonify }},
+      "inLanguage": "en-US",
+      "author": { "@id": "https://aioperationspartners.com/#jacob-krogue" },
+      "publisher": { "@id": "https://aioperationspartners.com/#organization" },
+      "blogPost": [{% for post in site.posts %}
+        {
+          "@type": "BlogPosting",
+          "headline": {{ post.title | jsonify }},
+          "url": {{ post.url | absolute_url | jsonify }},
+          "datePublished": "{{ post.date | date_to_xmlschema }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    },
+{% include schema-people.html %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aioperationspartners.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aioperationspartners.com/blog/" }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+{% include header.html %}
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">The blog</p>
+        <h1>How Fractional CFO practices find and win clients</h1>
+        <p class="lead">Practical advice on growing a Fractional CFO practice: finding clients beyond referrals, outbound that doesn't feel like spam, and how AI is changing the work.</p>
+        <div class="byline">
+          <img src="/assets/jacob-krogue.jpg" alt="Jacob Krogue" width="480" height="480">
+          <p>Written by <strong>Jacob Krogue, CPA</strong>, who helped scale a Fractional CFO firm from 8 to 30+ clients.</p>
+        </div>
+
+        {% assign latest = site.posts.first %}
+        {% if latest %}
+        <div class="featured">
+          <p class="eyebrow">Latest article</p>
+          {% include post-card.html post=latest featured=true %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {% if site.posts.size > 1 %}
+    <section class="section alt">
+      <div class="container">
+        <h2>More articles</h2>
+        <div class="grid grid-3">
+          {% for post in site.posts offset:1 %}
+          {% include post-card.html post=post %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+{% include playbook-signup.html %}
+  </main>
+
+{% include footer.html %}
+</body>
+</html>
